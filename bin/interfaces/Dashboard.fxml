@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="443.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.dashboardController">
+   <children>
+      <Pane layoutX="57.0" layoutY="62.0" prefHeight="47.0" prefWidth="660.0" style="-fx-background-color: #E5E8E8;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label layoutX="41.0" layoutY="5.0" text="Tableau de bord">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <LineChart fx:id="chart" layoutX="28.0" layoutY="100.0" prefHeight="316.0" prefWidth="397.0" title="Nombre de reservation par mois : ">
+        <xAxis>
+          <CategoryAxis fx:id="moisAx" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="numberAx" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#aed08a" height="90.0" layoutX="450.0" layoutY="150.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text fill="WHITE" layoutX="459.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de clients" />
+      <Text fx:id="Ncleint" layoutX="459.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100" wrappingWidth="53.2578125">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="83.0" fitWidth="72.0" layoutX="563.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/clients.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8dbdd7" height="90.0" layoutX="450.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+      <Text fill="WHITE" layoutX="459.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Chambres" />
+      <Text fx:id="NChambre" layoutX="459.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50" wrappingWidth="53.2578125">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="83.0" fitWidth="72.0" layoutX="563.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/single-bed.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
